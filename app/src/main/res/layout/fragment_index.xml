@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/device_no_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/dp_20"
+            android:text="@string/device_no"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp_20"
+            android:text="@string/service_mobile"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.tsminfo.android.baierhuiarm.activity.banner.Banner
+        android:id="@+id/index_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <VideoView
+        android:id="@+id/index_banner2"
+        android:layout_width="match_parent"
+        android:layout_height="624px"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone" />
+
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/index_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_20"
+        android:visibility="gone">
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:paddingTop="@dimen/dp_100">-->
+
+        <!--<View-->
+        <!--android:id="@+id/firstLine"-->
+        <!--android:layout_width="@dimen/dp_40"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+        <ImageButton
+            android:id="@+id/index_paper_towel_button"
+            android:layout_width="240px"
+            android:layout_height="400px"
+            android:layout_marginLeft="15px"
+            android:background="@color/colorWhite"
+            
+            android:scaleType="fitXY"
+            android:src="@drawable/img_paper_towel" />
+
+        <ImageButton
+            android:id="@+id/index_lottery_ticket_button"
+            android:layout_width="240px"
+            android:layout_height="400px"
+            android:layout_marginLeft="30px"
+            android:background="@color/colorWhite"
+            
+            android:scaleType="fitXY"
+            android:src="@drawable/img_lottery_ticket" />
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:paddingTop="@dimen/dp_40">-->
+
+        <!--<View-->
+        <!--android:id="@+id/secondLine"-->
+        <!--android:layout_width="@dimen/dp_40"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+        <ImageButton
+            android:id="@+id/index_charging_button"
+            android:layout_width="240px"
+            android:layout_height="400px"
+            android:layout_marginLeft="30px"
+            android:background="@color/colorWhite"
+            
+            android:scaleType="fitXY"
+            android:src="@drawable/img_charging" />
+
+        <ImageButton
+            android:id="@+id/index_replenishment_button"
+            android:layout_width="240px"
+            android:layout_height="400px"
+            android:layout_marginLeft="30px"
+            android:background="@color/colorWhite"
+            
+            android:scaleType="fitXY"
+            android:src="@drawable/img_replenishment" />
+
+    </LinearLayout>
+
+    <!-- Card -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="840px"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="120px"
+        android:layout_marginVertical="40px"
+        android:background="@color/colorWhite"
+        android:visibility="visible"
+        app:cardCornerRadius="67px">
+        <!-- 扫码领纸巾 -->
+        <LinearLayout
+            android:id="@+id/paper_scan_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="50px"
+            android:paddingBottom="80px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_free"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="@dimen/dp_40"
+                android:textSize="72px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/paper_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50px"
+                android:layout_marginTop="50px"
+                android:text="正在获取纸巾价格…"
+                android:textColor="@color/textColor"
+                android:textSize="54px" />
+
+            <ImageView
+                android:id="@+id/paper_scan_image_view"
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:layout_marginTop="80px"
+                
+                android:src="@drawable/qr_placeholder" />
+
+        </LinearLayout>
+
+        <!-- 纸巾出货成功 -->
+        <LinearLayout
+            android:id="@+id/paper_trade_result_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="140px"
+            android:paddingBottom="200px"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="240px"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trade_success_icon" />
+
+            <TextView
+                android:id="@+id/trade_success_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="166px"
+                android:layout_marginTop="40px"
+                android:gravity="center"
+                android:text="@string/shipment_success"
+                android:textColor="@color/textColor"
+                android:textSize="80px" />
+
+            <TextView
+                android:id="@+id/hint_success_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="@string/place_return_index"
+                android:textColor="@color/textColor"
+                android:textSize="60px" />
+        </LinearLayout>
+
+        <!-- 彩票/充电界面 -->
+        <LinearLayout
+            android:id="@+id/select_goods_num_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="40px"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/select_num_img"
+                    android:layout_width="240px"
+                    android:layout_height="240px"
+                     />
+
+                <LinearLayout
+                    android:id="@+id/goods_num_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/goods_num_minus_btn"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:background="@color/colorWhite"
+                        
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cart_minus_icon" />
+
+                    <TextView
+                        android:id="@+id/goods_num_text_view"
+                        android:layout_width="90px"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/goods_default_num"
+                        android:textColor="@color/textColor"
+                        android:textSize="42px" />
+
+                    <ImageButton
+                        android:id="@+id/goods_num_add_btn"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:background="@color/colorWhite"
+                        
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cart_add_icon" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/charging_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快速充电1小时"
+                    android:textColor="@color/textColor"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="-10px"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goods_amount_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount_placeholder"
+                    android:textColor="@color/textColor"
+                    android:layout_marginTop="30px"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goods_repertory_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:textSize="48px"
+                    android:textColor="@color/textColor"
+                    android:text="正在获取库存数量…"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--彩票/充电扫码-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/scan_pay_container_charging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/time_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80px"
+                    android:drawableTop="@drawable/pay_success_icon"
+                    android:drawablePadding="90px"
+                    android:gravity="center"
+                    android:text="@string/start_charging"
+                    android:textColor="@color/textColor"
+                    android:textSize="120px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scan_pay_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="80px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/scan_pay_image"
+                    android:layout_width="240px"
+                    android:layout_height="240px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lottery_ticket_img" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="100px"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/scan_pay_total_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/goods_total"
+                        android:textColor="@color/textColor"
+                        android:textSize="60px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/scan_pay_amount_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40px"
+                        android:text="@string/amount_placeholder"
+                        android:textColor="@color/textColor"
+                        android:textSize="45px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- 选择支付方式 -->
+    <LinearLayout
+        android:id="@+id/choose_pay_way_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_select_pay_way"
+            android:textColor="@color/textColor"
+            android:textSize="60px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/alipay_image_btn"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:background="@color/colorWhite"
+                
+                android:scaleType="fitXY"
+                android:src="@drawable/pay_alipay_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60px"
+                android:layout_marginEnd="60px"
+                android:text="@string/or"
+                android:textColor="@color/textColor"
+                android:textSize="80px" />
+
+            <ImageButton
+                android:id="@+id/wechat_image_btn"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:background="@color/colorWhite"
+                
+                android:scaleType="fitXY"
+                android:src="@drawable/pay_wechat_icon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 扫码支付 -->
+    <LinearLayout
+        android:id="@+id/scan_pay_container_right"
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/scan_pay_qr_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/place_use_wechat_pay"
+            android:textColor="@color/textColor"
+            android:textSize="60px" />
+
+        <ImageView
+            android:id="@+id/scan_pay_qr_image_view"
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="40px"
+            android:paddingTop="40px"
+            android:src="@drawable/qr_placeholder" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="94px"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40px"
+        android:layout_weight="0"
+        android:background="@drawable/btn_return"
+        android:text="@string/return_text"
+        android:textColor="@color/textColor"
+        android:textSize="60px"
+        android:paddingVertical="10px"
+        android:visibility="gone" />
+
+</LinearLayout>

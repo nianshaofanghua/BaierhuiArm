@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tsminfo.android.baierhuiarm.AdvertDetailActivity">
+<ImageView
+    android:id="@+id/iv_bg"
+    android:scaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:text="返回"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/tv_replenishment"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:text="补货"
+        android:textColor="#fff" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center_horizontal"
+              android:background="@drawable/bg_round_white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="30dp"
+        android:text="@string/ticket_replenish"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/dialog_input_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="@string/place_input_num"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lineColor"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_left_btn_white"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/cancel"
+            android:textColor="#08BF92"
+            android:textSize="30sp"
+            />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/lineColor"/>
+
+        <Button
+            android:id="@+id/dialog_sure_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_right_btn_color"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

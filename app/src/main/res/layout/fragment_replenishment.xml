@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="720px"
+        android:background="@drawable/replenish_header_img"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/device_no_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/dp_20"
+                android:text="@string/device_no"
+                android:textColor="@color/colorWhite"
+                android:textSize="28px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/service_tel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dp_20"
+                android:text="@string/service_mobile"
+                android:textColor="@color/colorWhite"
+                android:textSize="28px"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/replenish_return_btn"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_margin="@dimen/dp_20"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/top_btn_return" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingBottom="60px">
+
+                <ImageView
+                    android:layout_width="400px"
+                    android:layout_height="400px"
+                    android:src="@drawable/machine_logo" />
+
+                <TextView
+                    android:id="@+id/mobile_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60px"
+                    android:textColor="@color/colorWhite"
+                    android:text="153****6517"
+                    android:textSize="54px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="120px"
+                android:layout_height="120px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="60px"
+        android:layout_marginTop="80px"
+        android:layout_marginEnd="60px"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/paper_replenish_card_view"
+            android:layout_width="260px"
+            android:layout_height="400px"
+            app:cardCornerRadius="15px">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_replenish_paper" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ticket_replenish_card_view"
+            android:layout_width="260px"
+            android:layout_height="400px"
+            android:layout_marginLeft="90px"
+            app:cardCornerRadius="15px">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_replenish_ticket" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/open_lock_card_view"
+            android:layout_width="260px"
+            android:layout_height="400px"
+            android:layout_marginLeft="90px"
+            app:cardCornerRadius="15px">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_replenish_open_lock"/>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="当前库存："
+        android:textSize="60px"
+        android:layout_marginVertical="20px"
+        android:textColor="@color/textColor"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/lottery_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="彩票：0张"
+            android:textSize="60px"
+            android:textColor="@color/textColor"
+            />
+        <Button
+            android:id="@+id/clear_lottery_inventory_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_inventory"
+            android:textSize="24px"
+            android:layout_marginStart="20px"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:background="@drawable/shape_clear_button"
+            android:paddingStart="20px"
+            android:paddingEnd="20px"
+            android:paddingTop="10px"
+            android:paddingBottom="10px"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/paper_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纸巾：0包"
+            android:textSize="60px"
+            android:layout_marginVertical="20px"
+            android:textColor="@color/textColor"
+            />
+        <Button
+            android:id="@+id/clear_paper_inventory_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_inventory"
+            android:textSize="24px"
+            android:layout_marginStart="20px"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_clear_button"
+            android:paddingStart="20px"
+            android:paddingEnd="20px"
+            android:paddingTop="10px"
+            android:paddingBottom="10px"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

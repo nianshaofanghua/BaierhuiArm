@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">链尚科技</string>
+
+    <string name="device_no">货机编号</string>
+    <string name="service_mobile">服务电话：123456789</string>
+    <string name="scan_free">微信扫码领纸巾</string>
+    <string name="scan_free_detail">第一包免费送，第二包0.6元</string>
+    <string name="shipment_success">出纸成功</string>
+    <string name="goods_default_num">1</string>
+    <string name="amount_placeholder">总金额0元</string>
+    <string name="place_select_pay_way">请选择支付方式</string>
+    <string name="or">或</string>
+    <string name="alipay_red_packet">支付宝扫码领红包</string>
+    <string name="goods_total">共 张</string>
+    <string name="place_use_wechat_pay">请使用微信扫码支付</string>
+    <string name="place_use_alipay_pay">请使用支付宝扫码支付</string>
+    <string name="return_text">返回</string>
+    <string name="goods_num_not_minue">商品数量不能再减少了</string>
+    <string name="start_charging">开始充电</string>
+    <string name="place_return_index">请从出纸口取纸</string>
+    <string name="wish_you_a_lottery">祝您中奖！</string>
+
+    <string name="mobile_placeholder">请输入手机号</string>
+    <string name="password_placeholder">请输入密码</string>
+    <string name="login">登 录</string>
+
+    <string name="mobile">***********</string>
+    <string name="open_lock">开锁补货</string>
+    <string name="ticket_replenish">彩票补货</string>
+    <string name="paper_replenish">纸巾补货</string>
+    <string name="place_input_num">请输入补货数量</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="clear_inventory">清空库存</string>
+
+
+</resources>

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dp_30">30px</dimen>
+    <dimen name="dp_40">40px</dimen>
+    <dimen name="dp_100">100px</dimen>
+    <dimen name="dp_10">10px</dimen>
+    <dimen name="dp_20">20px</dimen>
+</resources>
