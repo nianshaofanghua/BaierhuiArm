@@ -85,7 +85,7 @@
             android:layout_height="400px"
             android:layout_marginLeft="30px"
             android:background="@color/colorWhite"
-            
+
             android:scaleType="fitXY"
             android:src="@drawable/img_lottery_ticket" />
 
@@ -121,7 +121,7 @@
             android:background="@color/colorWhite"
             
             android:scaleType="fitXY"
-            android:src="@drawable/img_replenishment" />
+            android:src="@drawable/icon_store" />
 
     </LinearLayout>
 
@@ -480,14 +480,14 @@
         android:id="@+id/return_btn"
         android:layout_width="wrap_content"
         android:layout_height="94px"
+        android:textSize="60px"
         android:layout_gravity="bottom"
         android:layout_marginBottom="40px"
         android:layout_weight="0"
         android:background="@drawable/btn_return"
+        android:paddingVertical="10px"
         android:text="@string/return_text"
         android:textColor="@color/textColor"
-        android:textSize="60px"
-        android:paddingVertical="10px"
         android:visibility="gone" />
 
 </LinearLayout>

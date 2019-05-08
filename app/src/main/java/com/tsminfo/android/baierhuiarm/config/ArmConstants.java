@@ -31,4 +31,8 @@ public class ArmConstants {
     public static final Integer DELIVERY_LOTTERY_MSG_KEY = 4;
     public static final String APK_DOWNLOAD_FILE_PATH = "/storage/emulated/sdcard/Android/BEHArmDownLoad/";
     public static final String APK_DOWNLOAD_FILE_NAME = "App_new.apk";
+
+    //buglyid
+    public static final String BUGLY_LOGIN_APP_ID = "27933163b8";
+
 }

@@ -13,8 +13,11 @@
     android:layout_height="match_parent" />
     <TextView
         android:id="@+id/tv_back"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="94px"
+        android:textSize="60px"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="30dp"
@@ -25,8 +28,11 @@
 
     <TextView
         android:id="@+id/tv_replenishment"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="94px"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="60px"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="60dp"

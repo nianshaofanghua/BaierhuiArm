@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Handler;
 
 import com.danikula.videocache.HttpProxyCacheServer;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.tsminfo.android.baierhuiarm.activity.banner.MyFileNameGenerator;
 import com.tsminfo.android.baierhuiarm.config.ArmConstants;
 import com.tsminfo.android.baierhuiarm.config.UrlConfig;
@@ -35,6 +36,10 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+
+
+
+        CrashReport.initCrashReport(getApplicationContext(), ArmConstants.BUGLY_LOGIN_APP_ID, true);
         MyApplication.mNetStatus = true;
         initOkHttpClient(); // okHttp初始化
         context = getApplicationContext();
