@@ -18,10 +18,30 @@ android {
         abortOnError false
     }
 
-    buildTypes {
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+
+
+
+        signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file('E:/workSpace/BaierhuiArm/keyStorePath.keystore')
+            storePassword "1Q2w3e4r"
+            keyAlias "appkey"
+            keyPassword "1Q2w3E4r"
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
         }
     }
 
