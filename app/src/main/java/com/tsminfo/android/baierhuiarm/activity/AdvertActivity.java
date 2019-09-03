@@ -52,6 +52,7 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
 
     private void initView() {
         int a  = 0;
+        a= a+11;
         iv_bg = findViewById(R.id.iv_bg);
         iv_one = findViewById(R.id.iv_one);
         iv_two = findViewById(R.id.iv_two);
