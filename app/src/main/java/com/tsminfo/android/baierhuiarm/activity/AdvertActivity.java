@@ -35,6 +35,8 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
 
     private ImageView iv_bg, iv_one, iv_two, iv_three, iv_four;
     private TextView tv_back, tv_replenishment;
+
+
     private Handler mHandler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +44,9 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_advert);
         ActivitysManager   activitysManager = ActivitysManager.getInstance();
         activitysManager.addActivity(this);
-
         NavigationBarStatusBar(this,true);
         initView();
+
         getAdvert();
     }
 

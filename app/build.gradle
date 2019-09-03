@@ -30,7 +30,7 @@ android {
 
         signingConfigs {
         release {
-            storeFile file('E:/workSpace/BaierhuiArm/keyStorePath.keystore')
+            storeFile file('D:/DemoWorkSpace/BaierhuiArm/keyStorePath.keystore')
             storePassword "1Q2w3e4r"
             keyAlias "appkey"
             keyPassword "1Q2w3E4r"
