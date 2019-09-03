@@ -51,11 +51,14 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void initView() {
+        int a  = 0;
         iv_bg = findViewById(R.id.iv_bg);
         iv_one = findViewById(R.id.iv_one);
         iv_two = findViewById(R.id.iv_two);
         iv_three = findViewById(R.id.iv_three);
+
         iv_four = findViewById(R.id.iv_four);
+
         tv_back = findViewById(R.id.tv_back);
         tv_replenishment = findViewById(R.id.tv_replenishment);
         tv_back.setOnClickListener(this);
