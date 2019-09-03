@@ -38,21 +38,24 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
 
 
     private Handler mHandler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advert);
-        ActivitysManager   activitysManager = ActivitysManager.getInstance();
+        ActivitysManager activitysManager = ActivitysManager.getInstance();
         activitysManager.addActivity(this);
-        NavigationBarStatusBar(this,true);
+        NavigationBarStatusBar(this, true);
         initView();
 
         getAdvert();
     }
 
     private void initView() {
-        int a  = 0;
-        a= a+11;
+        int a = 0;
+        a = a + 11;
+        //测试分支提交
+        int ddd = 1023143;
         iv_bg = findViewById(R.id.iv_bg);
         iv_one = findViewById(R.id.iv_one);
         iv_two = findViewById(R.id.iv_two);
@@ -107,27 +110,27 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
                 finish();
                 break;
             case R.id.tv_replenishment:
-                 intent = new Intent(this, LoginFragmentActivity.class);
+                intent = new Intent(this, LoginFragmentActivity.class);
                 startActivity(intent);
                 break;
             case R.id.iv_one:
-                intent  = new Intent(this, AdvertDetailActivity.class);
-                intent.putExtra("key","one_img");
+                intent = new Intent(this, AdvertDetailActivity.class);
+                intent.putExtra("key", "one_img");
                 startActivity(intent);
                 break;
             case R.id.iv_two:
-                intent  = new Intent(this, AdvertDetailActivity.class);
-                intent.putExtra("key","two_img");
+                intent = new Intent(this, AdvertDetailActivity.class);
+                intent.putExtra("key", "two_img");
                 startActivity(intent);
                 break;
             case R.id.iv_three:
-                intent  = new Intent(this, AdvertDetailActivity.class);
-                intent.putExtra("key","three_img");
+                intent = new Intent(this, AdvertDetailActivity.class);
+                intent.putExtra("key", "three_img");
                 startActivity(intent);
                 break;
             case R.id.iv_four:
-                intent  = new Intent(this, AdvertDetailActivity.class);
-                intent.putExtra("key","four_img");
+                intent = new Intent(this, AdvertDetailActivity.class);
+                intent.putExtra("key", "four_img");
                 startActivity(intent);
                 break;
         }
@@ -148,25 +151,28 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
         return super.onTouchEvent(event);
     }
 
-    Runnable runnable = new Runnable(){
+    Runnable runnable = new Runnable() {
 
         @Override
         public void run() {
             onBackPressed();
         }
     };
+
     @Override
     public void onBackPressed() {
 //            Intent intent= new Intent(this, IndexActivity.class);
-        Intent intent= new Intent(this, IndexFragmentActivity.class);
+        Intent intent = new Intent(this, IndexFragmentActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+
     /**
      * 导航栏，状态栏隐藏
+     *
      * @param activity
      */
-    public static void NavigationBarStatusBar(Activity activity, boolean hasFocus){
+    public static void NavigationBarStatusBar(Activity activity, boolean hasFocus) {
         if (hasFocus && Build.VERSION.SDK_INT >= 19) {
             View decorView = activity.getWindow().getDecorView();
             decorView.setSystemUiVisibility(
@@ -184,15 +190,17 @@ public class AdvertActivity extends BaseActivity implements View.OnClickListener
         super.onPause();
         mHandler.removeCallbacks(runnable);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         mHandler.postDelayed(runnable, 30000);
     }
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if (Build.VERSION.SDK_INT >= 19){
+        if (Build.VERSION.SDK_INT >= 19) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
